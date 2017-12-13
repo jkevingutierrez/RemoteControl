@@ -10,7 +10,7 @@ Remote Control Vehicle operated by console using Java
 
 ## Optionals
 
-- Eclipse (Tested in Eclipse Java EE IDE for Web Developers. Version: Oxygen.1a Release (4.7.1a))
+- Eclipse (Tested in Eclipse Java EE IDE for Web Developers. Version: Oxygen.1a Release (4.7.1a)) or IntelliJ (Tested in version 217.3 Ultimate Edition)
 - Gradle (Tested in version 4.4)
 - Buildship Gradle integration 2.0 for eclipse
 
