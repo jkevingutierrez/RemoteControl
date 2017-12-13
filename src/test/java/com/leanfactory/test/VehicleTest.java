@@ -7,6 +7,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.leanfactory.remote.core.Board;
 import com.leanfactory.remote.core.Vehicle;
 
 public class VehicleTest {
@@ -15,7 +16,8 @@ public class VehicleTest {
 
 	@Before
 	public void setUp() {
-		vehicle = new Vehicle(10, 10);
+		Board board = new Board(10, 10);
+		vehicle = new Vehicle(board);
 	}
 
 	@Test

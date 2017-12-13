@@ -1,21 +1,19 @@
 package com.leanfactory.remote.core;
 
+import com.leanfactory.remote.print.Printer;
+import com.leanfactory.remote.print.VehiclePrinter;
+
 public class Vehicle {
 
 	private int x;
 	private int y;
 
-	private int maxX;
-	private int maxY;
+	private Board board;
+	private final Printer<Vehicle> printer = new VehiclePrinter();
 
-	public Vehicle(int maxX, int maxY) {
-		if (maxX > 0 && maxY > 0) {
-			this.maxX = maxX;
-			this.maxY = maxY;
-			System.out.println("* Se ha creado un nuevo vehículo *");
-		} else {
-			throw new IllegalArgumentException("The x and y upper limit should be greater than 0");
-		}
+	public Vehicle(Board board) {
+		this.setBoard(board);
+		System.out.println("* Se ha creado un nuevo vehículo *");
 	}
 
 	public boolean moveX(int x) {
@@ -51,9 +49,9 @@ public class Vehicle {
 	}
 
 	public void setX(int x) {
-		if (x >= 0 && x <= this.getMaxX()) {
+		if (x >= 0 && x <= this.getBoard().getN()) {
 			this.x = x;
-			printPosition();
+			printer.print(this);
 		} else {
 			throw new IllegalArgumentException("Out of bound");
 		}
@@ -64,58 +62,19 @@ public class Vehicle {
 	}
 
 	public void setY(int y) {
-		if (y >= 0 && y <= this.getMaxY()) {
+		if (y >= 0 && y <= this.getBoard().getM()) {
 			this.y = y;
-			printPosition();
+			printer.print(this);
 		} else {
 			throw new IllegalArgumentException("Out of bound");
 		}
 	}
 
-	public int getMaxX() {
-		return maxX;
+	public Board getBoard() {
+		return board;
 	}
 
-	public void setMaxX(int maxX) {
-		if (maxX > 0) {
-			this.maxX = maxX;
-		} else {
-			throw new IllegalArgumentException("The X upper limit should be greater than 0");
-		}
+	public void setBoard(Board board) {
+		this.board = board;
 	}
-
-	public int getMaxY() {
-		return maxY;
-	}
-
-	public void setMaxY(int maxY) {
-		if (maxY > 0) {
-			this.maxY = maxY;
-		} else {
-			throw new IllegalArgumentException("The Y upper limit should be greater than 0");
-		}
-	}
-
-	private void printPosition() {
-		System.out.println("\n* Posición actual del vehículo: (" + this.x + ", " + this.y + ").");
-
-		for (int i = getMaxY(); i >= 0; i--) {
-			for (int j = 0; j <= getMaxX(); j++) {
-				if (this.x == j && this.y == i) {
-					System.out.print("  x  ");
-				} else {
-					System.out.print("  o  ");
-				}
-			}
-			System.out.println("");
-			if (i > 0) {
-				System.out.println("");
-			}
-		}
-
-		System.out.println("(0,0)");
-		System.out.println("");
-
-	}
-
 }

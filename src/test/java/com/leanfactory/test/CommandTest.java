@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.leanfactory.remote.core.Board;
 import com.leanfactory.remote.core.Command;
 import com.leanfactory.remote.core.Direction;
 import com.leanfactory.remote.core.Vehicle;
@@ -27,7 +28,8 @@ public class CommandTest {
 
 	@Test
 	public void testExecuteCommand() {
-		Vehicle vehicle = new Vehicle(10, 10);
+		Board board = new Board(10, 10);
+		Vehicle vehicle = new Vehicle(board);
 		assertTrue(command.execute(vehicle));
 
 		assertEquals(vehicle.getX(), 0);
