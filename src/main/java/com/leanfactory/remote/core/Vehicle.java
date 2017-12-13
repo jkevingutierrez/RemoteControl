@@ -97,17 +97,24 @@ public class Vehicle {
 	}
 
 	private void printPosition() {
-		System.out.println("\n* Posición actual del vehículo: (" + this.x + ", " + this.y + ") *\n");
+		System.out.println("* Posición actual del vehículo: (" + this.x + ", " + this.y + ").");
 
-		for (int i = 0; i < getMaxX(); i++) {
-			for (int j = 0; j < getMaxY(); j++) {
-				if (this.x == i && this.y == j) {
-					System.out.println(" x ");
+		for (int i = getMaxY(); i >= 0; i--) {
+			for (int j = 0; j <= getMaxX(); j++) {
+				if (this.x == j && this.y == i) {
+					System.out.print("  x  ");
 				} else {
-					System.out.println(" o ");
+					System.out.print("  o  ");
 				}
 			}
+			System.out.println("");
+			if (i > 0) {
+				System.out.println("");
+			}
 		}
+
+		System.out.println("(0,0)");
+		System.out.println("");
 
 	}
 

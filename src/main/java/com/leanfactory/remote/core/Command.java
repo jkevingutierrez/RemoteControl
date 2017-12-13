@@ -29,9 +29,9 @@ public class Command {
 	public boolean execute(Vehicle vehicle) {
 		switch (this.direction) {
 		case N:
-			return vehicle.moveX(vehicle.getY() + distance);
+			return vehicle.moveY(vehicle.getY() + distance);
 		case S:
-			return vehicle.moveX(vehicle.getY() - distance);
+			return vehicle.moveY(vehicle.getY() - distance);
 		case E:
 			return vehicle.moveX(vehicle.getX() + distance);
 		case O:
