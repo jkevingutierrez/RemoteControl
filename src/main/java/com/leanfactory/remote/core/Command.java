@@ -2,6 +2,7 @@ package com.leanfactory.remote.core;
 
 public class Command {
 	int distance;
+	Direction direction;
 
 	public int getDistance() {
 		return distance;
@@ -18,8 +19,6 @@ public class Command {
 	public void setDirection(Direction direction) {
 		this.direction = direction;
 	}
-
-	Direction direction;
 
 	public Command(Direction direction, int distance) {
 		this.distance = distance;

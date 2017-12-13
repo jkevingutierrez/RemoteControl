@@ -3,7 +3,7 @@ package com.leanfactory.remote.core;
 import java.util.List;
 import java.util.Scanner;
 
-import com.leanfactory.remote.helpers.StringHelper;
+import com.leanfactory.remote.helpers.SyntaxHelper;
 
 public class Application {
 
@@ -27,7 +27,7 @@ public class Application {
 		int m = in.nextInt();
 
 		Board board = new Board(n, m);
-		Vehicle vehicle = new Vehicle(board.getN(), board.getM());
+		Vehicle vehicle = new Vehicle(board);
 
 		Menu.explain();
 
@@ -35,8 +35,8 @@ public class Application {
 		do {
 			System.out.println("\tIngrese un comando o una lista de comandos:");
 			sentence = in.next();
-			if (StringHelper.hasAValidSyntax(sentence)) {
-				List<Command> commands = StringHelper.generateCommands(sentence);
+			if (SyntaxHelper.hasAValidSyntax(sentence)) {
+				List<Command> commands = CommandsBuilder.buildCommands(sentence);
 				for (Command command : commands) {
 					if (!command.execute(vehicle)) {
 						System.out.println("\n-- Se ha detenido el avance por salirse de los límites --\n");
