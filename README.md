@@ -2,7 +2,7 @@
 
 Remote Control Vehicle operated by console using Java
 
-![Class Diagram](https://raw.githubusercontent.com/jkevingutierrezg/RemoteControl/develop/resources/uml/RemoteControl.png)
+![Class Diagram](resources/uml/RemoteControl.png?raw=true)
 
 ## Requirements
 
