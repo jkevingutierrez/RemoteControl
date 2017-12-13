@@ -12,7 +12,7 @@ La ejecución de la aplicación se puede realizar a través de un IDE o a travé
 1. Gradle
 - Instalar Gradle (Se recomienda utilizar la versión 4.4)
 - Ejecutar el comando gradle build como un comando de consola, estando en el directorio del proyecto
-- Ejecutar el comando java -jar build/libs/RemoteControl-2.0.jar estando en el directorio del proyecto
+- Ejecutar el comando java -jar build/libs/RemoteControl-2.3.jar estando en el directorio del proyecto
 
 -También es posible generar los archivos de eclipse mediante el comando gradle eclipse.
 
