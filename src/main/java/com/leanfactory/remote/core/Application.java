@@ -43,7 +43,7 @@ public class Application {
 						break;
 					}
 				}
-			} else {
+			} else if (!sentence.toLowerCase().equals("c")) {
 				System.out.println("\n-- Error en formato de comando --\n");
 			}
 

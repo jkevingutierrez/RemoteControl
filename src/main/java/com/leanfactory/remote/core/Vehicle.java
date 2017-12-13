@@ -97,7 +97,7 @@ public class Vehicle {
 	}
 
 	private void printPosition() {
-		System.out.println("* Posición actual del vehículo: (" + this.x + ", " + this.y + ").");
+		System.out.println("\n* Posición actual del vehículo: (" + this.x + ", " + this.y + ").");
 
 		for (int i = getMaxY(); i >= 0; i--) {
 			for (int j = 0; j <= getMaxX(); j++) {

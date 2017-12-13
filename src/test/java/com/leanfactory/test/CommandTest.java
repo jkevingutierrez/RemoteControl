@@ -16,12 +16,12 @@ public class CommandTest {
 
 	@Before
 	public void setUp() {
-		command = new Command(Direction.S, 2);
+		command = new Command(Direction.N, 2);
 	}
 
 	@Test
 	public void testBoardInit() {
-		assertEquals(command.getDirection(), Direction.S);
+		assertEquals(command.getDirection(), Direction.N);
 		assertEquals(command.getDistance(), 2);
 	}
 
@@ -30,7 +30,7 @@ public class CommandTest {
 		Vehicle vehicle = new Vehicle(10, 10);
 		assertTrue(command.execute(vehicle));
 
-		assertEquals(vehicle.getX(), 2);
-		assertEquals(vehicle.getY(), 0);
+		assertEquals(vehicle.getX(), 0);
+		assertEquals(vehicle.getY(), 2);
 	}
 }
