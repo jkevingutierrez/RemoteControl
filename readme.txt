@@ -21,7 +21,7 @@ La ejecución de la aplicación se puede realizar a través de un IDE o a travé
     2.1. Eclipse-Gradle
     - Instalar el plugin Buildship Gradle integration 2.0
     - Importar el proyecto como un proyecto de gradle
-    - Ejecutar el proyecto a través del archivo src/main/java/com/leanfactory/remote/core/Application.java, el cual contiene el metodo main
+    - Ejecutar el proyecto a través del archivo src/main/java/com/leanfactory/remote/app/Application.java, el cual contiene el metodo main
 
     2.2 Sólo eclipse
     - Importar el proyecto como un proyecto ya existente
@@ -32,4 +32,4 @@ De la misma forma, es posible ejecutar los test unitarios utilizando Gradle o un
 
 CONSIDERACIONES
 
-Los diagramas UML se encuentran en la carpeta resources/uml
+Los diagramas UML se encuentran en la carpeta resources/uml. Los diagramas fueron creados con Astah Professional 7.2.0

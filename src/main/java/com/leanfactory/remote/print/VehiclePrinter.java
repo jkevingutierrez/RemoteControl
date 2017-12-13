@@ -1,10 +1,11 @@
-package com.leanfactory.remote.helpers;
+package com.leanfactory.remote.print;
 
 import com.leanfactory.remote.core.Vehicle;
 
-public class PrinterHelper {
+public class VehiclePrinter extends Printer<Vehicle> {
 
-	public static void printVehicle(Vehicle vehicle) {
+	@Override
+	public void print(Vehicle vehicle) {
 		System.out.println("\n* Posición actual del vehículo: (" + vehicle.getX() + ", " + vehicle.getY() + ").");
 
 		for (int i = vehicle.getBoard().getM(); i >= 0; i--) {
@@ -23,6 +24,7 @@ public class PrinterHelper {
 
 		System.out.println("(0,0)");
 		System.out.println("");
+
 	}
 
 }

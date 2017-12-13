@@ -1,8 +1,13 @@
-package com.leanfactory.remote.core;
+package com.leanfactory.remote.app;
 
 import java.util.List;
 import java.util.Scanner;
 
+import com.leanfactory.remote.core.Board;
+import com.leanfactory.remote.core.Command;
+import com.leanfactory.remote.core.CommandsBuilder;
+import com.leanfactory.remote.core.Menu;
+import com.leanfactory.remote.core.Vehicle;
 import com.leanfactory.remote.helpers.SyntaxHelper;
 
 public class Application {

@@ -1,6 +1,7 @@
 package com.leanfactory.remote.core;
 
-import com.leanfactory.remote.helpers.PrinterHelper;
+import com.leanfactory.remote.print.Printer;
+import com.leanfactory.remote.print.VehiclePrinter;
 
 public class Vehicle {
 
@@ -8,11 +9,11 @@ public class Vehicle {
 	private int y;
 
 	private Board board;
+	private final Printer<Vehicle> printer = new VehiclePrinter();
 
 	public Vehicle(Board board) {
 		this.setBoard(board);
 		System.out.println("* Se ha creado un nuevo vehículo *");
-
 	}
 
 	public boolean moveX(int x) {
@@ -50,7 +51,7 @@ public class Vehicle {
 	public void setX(int x) {
 		if (x >= 0 && x <= this.getBoard().getN()) {
 			this.x = x;
-			PrinterHelper.printVehicle(this);
+			printer.print(this);
 		} else {
 			throw new IllegalArgumentException("Out of bound");
 		}
@@ -63,7 +64,7 @@ public class Vehicle {
 	public void setY(int y) {
 		if (y >= 0 && y <= this.getBoard().getM()) {
 			this.y = y;
-			PrinterHelper.printVehicle(this);
+			printer.print(this);
 		} else {
 			throw new IllegalArgumentException("Out of bound");
 		}
