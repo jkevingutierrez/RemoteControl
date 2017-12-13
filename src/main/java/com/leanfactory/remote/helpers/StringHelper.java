@@ -8,11 +8,28 @@ import com.leanfactory.remote.core.Direction;
 
 public class StringHelper {
 	public static boolean hasAValidSyntax(String sentence) {
-		return true;
+		if (sentence == null || sentence.equals("") || sentence.endsWith(";") || sentence.endsWith(",")) {
+			return false;
+		}
+
+		try {
+			String[] stringCommands = sentence.split(";");
+			for (String commandString : stringCommands) {
+				String[] parts = commandString.split(",");
+				if (parts.length != 2) {
+					return false;
+				}
+			}
+
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+
 	}
 
 	public static List<Command> generateCommands(String sentence) {
-		sentence = sentence.trim().toUpperCase();
+		sentence = sentence.toUpperCase();
 		List<Command> commands = new LinkedList<Command>();
 
 		String[] stringCommands = sentence.split(";");
