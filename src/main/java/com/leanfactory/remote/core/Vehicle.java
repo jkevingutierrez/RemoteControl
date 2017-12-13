@@ -12,9 +12,9 @@ public class Vehicle {
 		if (maxX > 0 && maxY > 0) {
 			this.maxX = maxX;
 			this.maxY = maxY;
-
+			System.out.println("* Se ha creado un nuevo vehículo *");
 		} else {
-			throw new IllegalArgumentException("The X upper limit should be greater than 0");
+			throw new IllegalArgumentException("The x and y upper limit should be greater than 0");
 		}
 	}
 
@@ -53,6 +53,7 @@ public class Vehicle {
 	public void setX(int x) {
 		if (x >= 0 && x <= this.getMaxX()) {
 			this.x = x;
+			printPosition();
 		} else {
 			throw new IllegalArgumentException("Out of bound");
 		}
@@ -65,6 +66,7 @@ public class Vehicle {
 	public void setY(int y) {
 		if (y >= 0 && y <= this.getMaxY()) {
 			this.y = y;
+			printPosition();
 		} else {
 			throw new IllegalArgumentException("Out of bound");
 		}
@@ -92,6 +94,21 @@ public class Vehicle {
 		} else {
 			throw new IllegalArgumentException("The Y upper limit should be greater than 0");
 		}
+	}
+
+	private void printPosition() {
+		System.out.println("\n* Posición actual del vehículo: (" + this.x + ", " + this.y + ") *\n");
+
+		for (int i = 0; i < getMaxX(); i++) {
+			for (int j = 0; j < getMaxY(); j++) {
+				if (this.x == i && this.y == j) {
+					System.out.println(" x ");
+				} else {
+					System.out.println(" o ");
+				}
+			}
+		}
+
 	}
 
 }

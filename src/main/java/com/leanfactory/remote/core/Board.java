@@ -1,13 +1,18 @@
 package com.leanfactory.remote.core;
 
 public class Board {
-	
+
 	private int n;
 	private int m;
-	
+
 	public Board(int n, int m) {
-		this.setN(n);
-		this.setM(m);
+		if (n > 0 && m > 0) {
+			this.setN(n);
+			this.setM(m);
+			System.out.println("* Se ha creado un tablero de (" + this.n + " x " + this.m + ") *");
+		} else {
+			throw new IllegalArgumentException("n and m should be greater than 0");
+		}
 	}
 
 	public int getN() {

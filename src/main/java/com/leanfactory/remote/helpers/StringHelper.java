@@ -6,23 +6,11 @@ import java.util.List;
 import com.leanfactory.remote.core.Command;
 
 public class StringHelper {
-	public static boolean hasAValidSyntax(String s) {
+	public static boolean hasAValidSyntax(String sentence) {
 		return false;
 	}
 
-	public static boolean hasOneCommand(String s) {
-		return false;
-	}
-
-	public static boolean hasMultipleCommands(String s) {
-		return false;
-	}
-
-	public static Command generateCommand(String s) {
-		return null;
-	}
-
-	public static List<Command> generateMultipleCommands(String s) {
+	public static List<Command> generateCommands(String sentence) {
 		List<Command> commands = new LinkedList<Command>();
 		return commands;
 	}

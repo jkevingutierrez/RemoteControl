@@ -21,21 +21,7 @@ public class StringHelperTest {
 		assertTrue(StringHelper.hasAValidSyntax(s));
 	}
 
-	@Test
-	public void testHasOneCommand() {
-		assertTrue(StringHelper.hasOneCommand(s));
-	}
-
-	@Test
-	public void testHasMultipleCommands() {
-		assertTrue(StringHelper.hasMultipleCommands(s));
-	}
-
-	public void testGenerateCommand(String s) {
-		assertTrue(false);
-	}
-
-	public void testGenerateMultipleCommands(String s) {
+	public void testGenerateCommands() {
 		assertTrue(false);
 	}
 
