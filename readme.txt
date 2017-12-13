@@ -1,11 +1,11 @@
 DATOS
 
-- Kevin Gutierrez
+- Kevin Gutiérrez
 - C.C. 1.022.384.872
 
 INSTRUCCIONES DE INSTALACIÓN
 
--Instalar el JDK de Java (Se recomienda utilizar la version 1.8.151).
+-Instalar el JDK de Java (Se recomienda utilizar la versión 1.8.151).
 
 La ejecución de la aplicación se puede realizar a través de un IDE o a través de Gradle:
 
@@ -17,17 +17,20 @@ La ejecución de la aplicación se puede realizar a través de un IDE o a travé
 -También es posible generar los archivos de eclipse mediante el comando gradle eclipse.
 
 2. Eclipse
--Instalar eclipse (Se recomienda utilizar la versión oxygen)
     2.1. Eclipse-Gradle
     - Instalar el plugin Buildship Gradle integration 2.0
     - Importar el proyecto como un proyecto de gradle
     - Ejecutar el proyecto a través del archivo src/main/java/com/leanfactory/remote/app/Application.java, el cual contiene el metodo main
 
-    2.2 Sólo eclipse
-    - Importar el proyecto como un proyecto ya existente
-    - Ejecutar el proyecto a través del archivo Application.java, el cual contiene el metodo main
+3. IntelliJ
+- Instalar el plugin de gradle
+- Abrir la carpeta del proyecto en IntelliJ
+- Esperar a que cargue las dependencias
+- Ejecutar la aplicación través del archivo src/main/java/com/leanfactory/remote/app/Application.java, el cual contiene el metodo main
 
-De la misma forma, es posible ejecutar los test unitarios utilizando Gradle o un IDE. Para este caso, se utilizara la ruta src/test/java/com/leanfactory/test
+TESTS
+
+De la misma forma, es posible ejecutar los test unitarios utilizando Gradle o un IDE. Para este caso, se utilizara la ruta src/test/java/com/leanfactory/test y el comando gradle test.
 
 
 CONSIDERACIONES
