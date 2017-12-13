@@ -2,18 +2,17 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 
 sourceCompatibility = 1.8
-version = '0.1'
+version = '1.0'
 
 jar {
     manifest {
         attributes 'Implementation-Title': 'Remote Control',
-                   'Implementation-Version': version
+                   'Implementation-Version': version,
+                   'Main-Class': 'com.leanfactory.remote.core.Application'
     }
 }
 
-// In this section you declare where to find the dependencies of your project
 repositories {
-    // You can declare any Maven/Ivy/file repository here.
     mavenLocal()
     mavenCentral()
 }
